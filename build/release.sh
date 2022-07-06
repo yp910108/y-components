@@ -21,5 +21,5 @@ then
   git push -u origin master
 
   # publish
-  npm publish
+  npm publish --access=public
 fi
