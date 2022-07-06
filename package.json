@@ -1,0 +1,67 @@
+{
+  "name": "@yp910108/y-components",
+  "version": "0.0.2",
+  "description": "A Component Library for Element-UI.",
+  "author": "yp910108",
+  "main": "lib/y-components.common.js",
+  "module": "lib/y-components.common.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "gen-json": "node build/gen-json.js",
+    "gen-css": "node build/gen-css.js",
+    "gen-entry": "npm run gen-json && node build/build-entry.js",
+    "build-css": "npm run gen-css && sass ./packages/theme/:./lib/theme/ -s compressed --no-source-map",
+    "docs": "npm run gen-entry && npm run gen-css && webpack-dev-server --config build/webpack.docs.js",
+    "lib": "npm run clean && npm run gen-entry && npm run build-css && webpack --config build/webpack.common.js && webpack --config build/webpack.components.js",
+    "pub": "sh build/release.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yp910108/y-components.git"
+  },
+  "homepage": "https://github.com/yp910108/y-components",
+  "keywords": [
+    "vue",
+    "element",
+    "components"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "sortablejs": "1.15.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-plugin-syntax-jsx": "6.18.0",
+    "babel-plugin-transform-vue-jsx": "3.7.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-stage-2": "6.24.1",
+    "css-loader": "2.1.1",
+    "element-ui": "2.13.2",
+    "html-webpack-plugin": "3.2.0",
+    "prettier": "2.6.2",
+    "progress-bar-webpack-plugin": "1.12.1",
+    "sass": "1.32.0",
+    "sass-loader": "10.1.0",
+    "select-version-cli": "0.0.2",
+    "style-loader": "0.23.1",
+    "svg-sprite-loader": "4.2.1",
+    "uppercamelcase": "1.1.0",
+    "url-loader": "1.1.2",
+    "vue": "2.6.14",
+    "vue-loader": "15.9.8",
+    "vue-router": "3.5.2",
+    "vue-template-compiler": "2.6.14",
+    "webpack": "4.46.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.3",
+    "webpack-node-externals": "1.7.2"
+  },
+  "peerDependencies": {
+    "element-ui": "^2.13.2",
+    "vue": "^2.6.14"
+  }
+}

@@ -1,0 +1,21 @@
+@import './variables';
+
+.el-form {
+  .el-form-item {
+    // .el-input,
+    // .el-input-number,
+    // .el-select,
+    // .i-date-editor-wrapper,
+    // .el-date-editor-wrapper,
+    // .el-date-editor {
+    //   vertical-align: top;
+    //   width: 100%;
+    //   .el-input__inner {
+    //     height: 32px !important;
+    //   }
+    // }
+    &.is-error .el-input__inner {
+      border-color: $--color-danger !important;
+    }
+  }
+}
