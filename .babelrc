@@ -12,5 +12,5 @@
     ],
     "stage-2"
   ],
-  "plugins": ["transform-vue-jsx"]
+  "plugins": ["transform-runtime", "transform-vue-jsx"]
 }

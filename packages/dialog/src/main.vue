@@ -1,5 +1,5 @@
 <template>
-  <el-dialog v-bind="$attrs" v-on="$listeners">
+  <el-dialog v-bind="{ modalAppendToBody: true, appendToBody: true, ..._attrs }" v-on="$listeners">
     <template #title>
       <slot name="title" />
     </template>
@@ -11,8 +11,19 @@
 </template>
 
 <script>
+import { camelize } from 'packages/utils'
+
 export default {
   name: 'YDialog',
-  inheritAttrs: false
+  inheritAttrs: false,
+  computed: {
+    _attrs() {
+      const result = {}
+      for (const key in this.$attrs) {
+        result[camelize(key)] = this.$attrs[key]
+      }
+      return result
+    }
+  }
 }
 </script>

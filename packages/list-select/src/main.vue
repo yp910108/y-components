@@ -41,7 +41,10 @@ export default {
       default: true
     },
     disabled: Boolean,
-    placeholder: String,
+    placeholder: {
+      type: String,
+      default: '请选择'
+    },
     attrsInput: Object
   },
   components: {

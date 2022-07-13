@@ -95,7 +95,7 @@
         />
       </y-form-item>
     </y-form>
-    <template v-if="!this.isDetail" #footer>
+    <template v-if="!isDetail" #footer>
       <y-button plain @click="hide">取 消</y-button>
       <y-button :loading="loadingSave" :disabled="!ableSave" type="primary" @click="handleSave">确 定</y-button>
     </template>

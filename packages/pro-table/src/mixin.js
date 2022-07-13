@@ -1,6 +1,11 @@
 export default {
   methods: {
     initEvents() {
+      for (const key in this.$refs.search) {
+        if (!(key in this) && typeof this.$refs.search[key] === 'function') {
+          this[key] = this.$refs.search[key]
+        }
+      }
       for (const key in this.$refs.table) {
         if (!(key in this) && typeof this.$refs.table[key] === 'function') {
           this[key] = this.$refs.table[key]

@@ -9,7 +9,7 @@
       <y-scrollbar>
         <y-checkbox-group v-model="checked">
           <y-dropdown-item v-for="({ label, prop }, index) of columns" :key="prop">
-            <y-icon icon="drag-column" />
+            <i class="el-icon-rank" />
             <y-checkbox :label="prop">{{ label }}</y-checkbox>
             <span class="operation">
               <i v-if="index !== 0" class="el-icon-upload2" @click="handleUp(prop)" />

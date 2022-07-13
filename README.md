@@ -1,8 +1,8 @@
-# app-list
+# y-components
 
 ## 说明
 
-基于 element-ui 二次封装的组件库
+基于 element-ui 的组件库
 
 ## 目录结构
 
@@ -44,7 +44,7 @@
 npm install
 ```
 
-## 本地测试
+## 本地运行使用文档
 
 ```shell
 npm run docs

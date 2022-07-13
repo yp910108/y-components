@@ -1,13 +1,13 @@
 $--color-primary: #409eff !default;
-$--color-primary-light-9: mix(#fff, $--color-primary, 90%);
+$--color-primary-light-9: mix(#fff, $--color-primary, 90%) !default;
 $--color-danger: #f56c6c !default;
 
 // border-color
-$--border-color-lighter: #ebeef5;
+$--border-color-lighter: #ebeef5 !default;
 
 // table
-$--table-border-color: $--border-color-lighter;
-$--table-border: 1px solid $--table-border-color;
+$--table-border-color: $--border-color-lighter !default;
+$--table-border: 1px solid $--table-border-color !default;
 
 // drop-down-menu-item
-$--dropdown-menuItem-hover-fill: $--color-primary-light-9;
+$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;

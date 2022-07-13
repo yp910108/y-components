@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { camelize } from 'packages/utils'
+import { camelize, scrollTo } from 'packages/utils'
 import YTableColumn from 'packages/table-column'
 
 export default {
@@ -48,6 +48,10 @@ export default {
       } else {
         return row[prop]
       }
+    },
+    scrollToTop() {
+      const el = this.$refs.table.$el.querySelector('.el-table__body-wrapper')
+      scrollTo(el)
     }
   },
   computed: {
@@ -62,15 +66,12 @@ export default {
     }
   },
   watch: {
-    '$attrs.data'() {
-      this.$nextTick(this.$refs.table.doLayout)
+    '$attrs.data'(newVal, oldVal) {
+      if (newVal !== oldVal) {
+        this.$nextTick(this.$refs.table.doLayout)
+        setTimeout(this.scrollToTop)
+      }
     }
-  },
-  activated() {
-    this.$refs.table.doLayout()
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.$refs.table.doLayout)
   },
   mounted() {
     for (const key in this.$refs.table) {
@@ -79,6 +80,12 @@ export default {
       }
     }
     window.addEventListener('resize', this.$refs.table.doLayout)
+  },
+  activated() {
+    this.$refs.table.doLayout()
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.$refs.table.doLayout)
   }
 }
 </script>

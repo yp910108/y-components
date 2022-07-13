@@ -12,7 +12,7 @@
             v-if="searchType === SEARCH_TYPE.select || !!valueEnum"
             v-model="form[prop]"
             filterable
-            :options="valueEnum"
+            :options="typeof valueEnum === 'function' ? valueEnum() : valueEnum"
             :placeholder="`请选择${extraPlaceholder}`"
           />
           <y-date-picker
@@ -61,8 +61,8 @@ const SEARCH_TYPE = {
 }
 
 const WIDTH = {
-  xl: 1658,
-  lg: 1238,
+  xl: 1600,
+  lg: 1200,
   md: 888
 }
 

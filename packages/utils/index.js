@@ -1,3 +1,3 @@
-export * from './common'
+export * from './util'
 export * from './data'
 export * from './dom'

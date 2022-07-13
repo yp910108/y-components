@@ -258,11 +258,6 @@ export default {
     ) {
       this.fetch()
     }
-    for (const key in this.$refs.search) {
-      if (!(key in this) && typeof this.$refs.search[key] === 'function') {
-        this[key] = this.$refs.search[key]
-      }
-    }
   }
 }
 </script>

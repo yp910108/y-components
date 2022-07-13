@@ -10,7 +10,7 @@ export function fetchList({ name, sex, idCard, startBirthDate, endBirthDate, pag
         sex: i % 2 === 0 ? SEX.man : SEX.woman,
         phone: '13812345678',
         idCard: '370181200022222222',
-        birthDate: `${1991 + i * 2}-10-01`
+        birthDate: '2022-07-07'
       })
     }
     if (name) {

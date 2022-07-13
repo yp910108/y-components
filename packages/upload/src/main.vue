@@ -11,6 +11,9 @@
     }"
   >
     <slot />
+    <template #tip>
+      <slot name="tip" />
+    </template>
   </el-upload>
 </template>
 

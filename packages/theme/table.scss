@@ -3,15 +3,14 @@
 .el-table {
   .el-table__header {
     th {
-      padding: 6px 0;
-      background: #f5f7fa;
-      .cell {
-        font-family: PingFangSC-Semibold;
-        font-weight: 600;
-        color: #909399;
-        .caret-wrapper {
-          margin-top: -7px;
-          margin-bottom: -8px;
+      .cell .caret-wrapper {
+        vertical-align: top;
+        height: 23px;
+        .ascending {
+          top: 0;
+        }
+        .descending {
+          bottom: 0;
         }
       }
       &.is-required .cell:before {
@@ -23,7 +22,6 @@
   }
   .el-table__body {
     td {
-      padding: 6px 0;
       .cell {
         width: 100% !important;
       }

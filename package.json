@@ -1,12 +1,13 @@
 {
   "name": "@yp910108/y-components",
   "version": "1.0.1",
-  "description": "A Component Library for Element-UI.",
+  "description": "A Component Library based on Element-UI.",
   "author": "yp910108",
   "main": "lib/y-components.common.js",
   "module": "lib/y-components.common.js",
   "files": [
-    "lib"
+    "lib",
+    "packages"
   ],
   "scripts": {
     "clean": "rimraf lib",
@@ -36,6 +37,7 @@
     "babel-core": "6.26.3",
     "babel-loader": "7.1.5",
     "babel-plugin-syntax-jsx": "6.18.0",
+    "babel-plugin-transform-runtime": "6.23.0",
     "babel-plugin-transform-vue-jsx": "3.7.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-stage-2": "6.24.1",

@@ -76,6 +76,11 @@ export default {
     async methodRequest(params) {
       params = { ...params, pageNo: params.currentPage }
       delete params.currentPage
+      if (!!params.birthDate && !!params.birthDate.length) {
+        params.startBirthDate = params.birthDate[0]
+        params.endBirthDate = params.birthDate[1]
+        delete params.birthDate
+      }
       const { list, total } = await fetchList(params)
       return { data: list, total }
     },

@@ -104,7 +104,7 @@
               .el-input,
               .el-input-number,
               .el-select,
-              .i-date-editor-wrapper,
+              .y-date-editor-wrapper,
               .el-date-editor-wrapper,
               .el-date-editor {
                 width: 250px;
@@ -130,6 +130,14 @@
       margin-top: 16px;
       padding: 0 9px;
       text-align: right;
+      .el-input {
+        .el-input__suffix {
+          .el-input__validateIcon {
+            // hack: hack: el-input__validateIcon will be added when form validate
+            display: none;
+          }
+        }
+      }
       @media screen and (max-width: 750px) {
         .btn-prev,
         .el-pager,
@@ -186,7 +194,7 @@
           padding: 0 10px;
           height: 28px;
           line-height: 1;
-          .i-icon {
+          .el-icon-rank {
             flex: 0 0 auto;
             font-size: 12px;
           }
@@ -238,7 +246,7 @@
         .sortable-ghost {
           opacity: 0.8;
           background: $--color-primary;
-          .i-icon {
+          .el-icon-rank {
             color: #fff;
           }
           .el-checkbox__label {
