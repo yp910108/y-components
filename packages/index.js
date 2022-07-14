@@ -87,7 +87,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.0.2',
+  version: '1.0.3',
   install,
   Button,
   Cascader,

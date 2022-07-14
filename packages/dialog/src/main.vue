@@ -1,5 +1,8 @@
 <template>
-  <el-dialog v-bind="{ modalAppendToBody: true, appendToBody: true, ..._attrs }" v-on="$listeners">
+  <el-dialog
+    v-bind="{ modalAppendToBody: true, appendToBody: true, ..._attrs }"
+    v-on="{ ...$listeners, open: handleOpen }"
+  >
     <template #title>
       <slot name="title" />
     </template>
@@ -16,6 +19,13 @@ import { camelize } from 'packages/utils'
 export default {
   name: 'YDialog',
   inheritAttrs: false,
+  methods: {
+    handleOpen() {
+      this.$nextTick(() => {
+        this.$emit('open')
+      })
+    }
+  },
   computed: {
     _attrs() {
       const result = {}

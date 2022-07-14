@@ -45,6 +45,7 @@ export function fetchDetail() {
       resolve({
         name: '小明',
         sex: 1,
+        age: 5,
         brithDay: '2022-07-05',
         class: 1,
         tree1: 10001,

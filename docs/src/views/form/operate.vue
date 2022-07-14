@@ -17,6 +17,15 @@
           <y-radio :label="SEX.woman">{{ sexKeyValue[SEX.woman] }}</y-radio>
         </y-radio-group>
       </y-form-item>
+      <y-form-item prop="age" label="年龄">
+        <y-input-number
+          v-model="form.age"
+          :min="1"
+          :precision="0"
+          :disabled="isDetail"
+          :placeholder="isDetail ? '' : '请输入'"
+        />
+      </y-form-item>
       <y-form-item prop="brithDay" label="出生日期：">
         <y-date-picker v-model="form.brithDay" :disabled="isDetail" :placeholder="isDetail ? '' : '请选择'" />
       </y-form-item>
@@ -110,6 +119,7 @@ import { fetchList, fetchDetail, add, edit } from './api'
 const form = {
   name: undefined,
   sex: undefined,
+  age: undefined,
   brithDay: undefined,
   class: undefined,
   tree1: undefined,
@@ -131,10 +141,11 @@ export default {
       spinning: false,
       loadingSave: false,
       ableSave: true,
-      form: { ...form, sex: SEX.man },
+      form: { ...form, sex: SEX.man, age: 5 },
       rules: {
         name: [{ required: true, message: '请输入' }],
         sex: [{ required: true, message: '请选择' }],
+        age: [{ required: true, message: '请输入' }],
         brithDay: [{ required: true, message: '请选择' }],
         class: [{ required: true, message: '请选择' }],
         tree1: [{ required: true, message: '请选择' }],

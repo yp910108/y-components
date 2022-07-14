@@ -1,5 +1,5 @@
 .y-date-editor-wrapper:not(.y-range-editor-wrapper) {
-  width: 100%;
+  width: 220px;
   .el-date-editor {
     width: 100%;
     .el-input__prefix {
@@ -20,7 +20,7 @@
 }
 
 .y-date-editor-wrapper.y-range-editor-wrapper {
-  width: 100%;
+  width: 220px;
   .el-date-editor {
     display: flex;
     padding-left: 15px;

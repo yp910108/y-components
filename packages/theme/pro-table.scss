@@ -27,6 +27,14 @@
         .el-form-item__content {
           flex: 1;
           width: 0;
+          .el-input,
+          .el-input-number,
+          .el-select,
+          .el-cascader,
+          .y-date-editor-wrapper {
+            vertical-align: top;
+            width: 100%;
+          }
           .el-checkbox {
             font-weight: normal;
           }

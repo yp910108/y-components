@@ -72,6 +72,17 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.el-form .el-form-item .el-form-item__content {
+  .el-input,
+  .el-input-number,
+  .el-select,
+  .el-cascader,
+  .y-date-editor-wrapper {
+    vertical-align: top;
+    width: 100%;
+  }
+}
 </style>
 
 <style lang="scss" scoped>
