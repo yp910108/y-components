@@ -1,0 +1,16 @@
+$--color-primary: #409eff !default;
+$--color-primary-light-9: mix(#fff, $--color-primary, 90%) !default;
+$--color-danger: #f56c6c !default;
+
+// border-color
+$--border-color-lighter: #ebeef5 !default;
+
+// color
+$--color-text-primary: #303133;
+
+// table
+$--table-border-color: $--border-color-lighter !default;
+$--table-border: 1px solid $--table-border-color !default;
+
+// drop-down-menu-item
+$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;

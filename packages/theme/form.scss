@@ -1,0 +1,9 @@
+@import './variables';
+
+.el-form {
+  .el-form-item {
+    &.is-error .el-input__inner {
+      border-color: $--color-danger !important;
+    }
+  }
+}
