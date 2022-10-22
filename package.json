@@ -1,6 +1,6 @@
 {
   "name": "@yp910108/y-components",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "A Component Library based on Element-UI.",
   "author": "yp910108",
   "main": "lib/y-components.common.js",
