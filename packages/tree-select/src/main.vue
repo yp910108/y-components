@@ -82,7 +82,7 @@ export default {
     disabled: Boolean,
     placeholder: {
       type: String,
-      default: '已选择'
+      default: '请选择'
     },
     attrsInput: Object
   },

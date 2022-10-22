@@ -15,7 +15,7 @@
     "gen-css": "node build/gen-css.js",
     "gen-entry": "npm run gen-json && node build/build-entry.js",
     "build-css": "npm run gen-css && sass ./packages/theme/:./lib/theme/ -s compressed --no-source-map",
-    "docs": "npm run gen-entry && npm run gen-css && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.docs.js",
+    "docs:dev": "npm run gen-entry && npm run gen-css && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.docs.js",
     "docs:build": "rimraf docs/dist && npm run gen-entry && npm run gen-css && cross-env NODE_ENV=production webpack --config build/webpack.docs.js",
     "lib": "npm run clean && npm run gen-entry && npm run build-css && webpack --config build/webpack.umd.js && webpack --config build/webpack.common.js && webpack --config build/webpack.components.js",
     "pub": "sh build/release.sh"

@@ -6,7 +6,7 @@
 
 ## 文档
 
-- https://yp910108.github.io/y-components/
+- https://yp910108.github.io/y-components
 
 ## 安装
 

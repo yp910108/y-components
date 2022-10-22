@@ -144,11 +144,11 @@ export default {
         if (index !== -1) {
           this.checked.splice(index, 1)
         } else {
-          this.checked.push(row)
+          this.checked.push({ ...row })
         }
         this.setChecked()
       } else {
-        this.selectedRow = row
+        this.selectedRow = { ...row }
       }
       this.$emit('row-click', ...rest)
     },

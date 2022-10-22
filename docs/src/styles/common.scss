@@ -11,6 +11,9 @@ body {
     width: 8px;
     height: 8px;
   }
+  ::-webkit-scrollbar-corner {
+    background: #f6f6f6;
+  }
   ::-webkit-scrollbar-track {
     background: #f6f6f6;
     border-radius: 4px;
@@ -21,9 +24,6 @@ body {
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #90939980;
-  }
-  ::-webkit-scrollbar-corner {
-    background: #f6f6f6;
   }
 }
 

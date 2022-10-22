@@ -18,6 +18,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@yp910108/y-components/lib/theme/index.css'
 import App from './App.vue'
 
+Vue.use(Element, { size: 'small', zIndex: 3000 })
 Vue.use(YComponents)
 
 new Vue({

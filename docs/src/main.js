@@ -15,7 +15,7 @@ for (const key of icons.keys()) {
   icons(key)
 }
 
-Vue.use(Element, { size: 'small', zIndex: 10000 })
+Vue.use(Element, { size: 'small', zIndex: 3000 })
 Vue.use(YComponents)
 
 Vue.component('demo-block', DemoBlock)

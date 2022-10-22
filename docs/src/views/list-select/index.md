@@ -383,29 +383,29 @@ y-list-select 是由 el-input、el-dialog 和 y-protable 派生，默认支持 [
 
 ### Attributes
 
-| 参数            | 说明                                                                                                                                                                                        | 类型                   | 可选值 | 默认值 |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------ | ------ |
-| value / v-model | 绑定值                                                                                                                                                                                      | object / array         | —      | —      |
-| title           | dialog 弹窗标题                                                                                                                                                                             | string                 | —      | 请选择 |
-| props           | 配置选项，具体见下表                                                                                                                                                                        | object                 | —      | —      |
-| checkable       | 是否多选                                                                                                                                                                                    | boolean                | —      | false  |
-| clearable       | 是否可以清空选项                                                                                                                                                                            | boolean                | —      | true   |
-| disabled        | 是否禁用                                                                                                                                                                                    | boolean                | —      | false  |
-| placeholder     | 占位符                                                                                                                                                                                      | string                 | —      | 请选择 |
-| method-confirm  | 选择完成之前调用的方法。该方法的参数是选择的结果或选择的结果集合（当设置 `checkable` 为 true 时），请确保该方法返回一个 promise。                                                           | function (selected) {} | —      | —      |
-| attrs-input     | input 框 [el-input](https://element.eleme.cn/2.13/#/zh-CN/component/input#input-attributes) 对应的属性，当设置该属性时，`clearable`、`disabled`、`placeholder` 属性值会被该属性对应的值覆盖 | object                 | —      | —      |
-| attrs-dialog    | dialog 弹窗 [el-dialog](https://element.eleme.cn/2.13/#/zh-CN/component/dialog#attributes) 对应的属性，当设置该属性时，`title` 属性值会被该属性对应的值覆盖                                 | object                 | —      | —      |
+| 参数            | 说明                                                                                                                                                                                        | 类型                | 可选值 | 默认值 |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ------ | ------ |
+| value / v-model | 绑定值                                                                                                                                                                                      | object / array      | —      | —      |
+| title           | dialog 弹窗标题                                                                                                                                                                             | string              | —      | 请选择 |
+| props           | 配置选项，具体见下表                                                                                                                                                                        | object              | —      | —      |
+| checkable       | 是否多选                                                                                                                                                                                    | boolean             | —      | false  |
+| clearable       | 是否可以清空选项                                                                                                                                                                            | boolean             | —      | true   |
+| disabled        | 是否禁用                                                                                                                                                                                    | boolean             | —      | false  |
+| placeholder     | 占位符                                                                                                                                                                                      | string              | —      | 请选择 |
+| method-confirm  | 选择完成之前调用的方法。该方法的参数是选择的结果或选择的结果集合（当设置 `checkable` 为 true 时），请确保该方法返回一个 promise。                                                           | function (selected) | —      | —      |
+| attrs-input     | input 框 [el-input](https://element.eleme.cn/2.13/#/zh-CN/component/input#input-attributes) 对应的属性，当设置该属性时，`clearable`、`disabled`、`placeholder` 属性值会被该属性对应的值覆盖 | object              | —      | —      |
+| attrs-dialog    | dialog 弹窗 [el-dialog](https://element.eleme.cn/2.13/#/zh-CN/component/dialog#attributes) 对应的属性，当设置该属性时，`title` 属性值会被该属性对应的值覆盖                                 | object              | —      | —      |
 
 ### ListSelectPane Attributes
 
-| 参数            | 说明                                                                                                                                                        | 类型                   | 可选值 | 默认值 |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------ | ------ |
-| title           | dialog 弹窗标题                                                                                                                                             | string                 | —      | 请选择 |
-| props           | 配置选项，具体见下表                                                                                                                                        | object                 | —      | —      |
-| checkable       | 是否多选                                                                                                                                                    | boolean                | —      | false  |
-| defaultSelected | 默认选中的项                                                                                                                                                | object / array         | —      | —      |
-| method-confirm  | 选择完成之前调用的方法。该方法的参数是选择的结果或选择的结果集合（当设置 `checkable` 为 true 时），请确保该方法返回一个 promise。                           | function (selected) {} | —      | —      |
-| attrs-dialog    | dialog 弹窗 [el-dialog](https://element.eleme.cn/2.13/#/zh-CN/component/dialog#attributes) 对应的属性，当设置该属性时，`title` 属性值会被该属性对应的值覆盖 | object                 | —      | —      |
+| 参数            | 说明                                                                                                                                                        | 类型                | 可选值 | 默认值 |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ------ | ------ |
+| title           | dialog 弹窗标题                                                                                                                                             | string              | —      | 请选择 |
+| props           | 配置选项，具体见下表                                                                                                                                        | object              | —      | —      |
+| checkable       | 是否多选                                                                                                                                                    | boolean             | —      | false  |
+| defaultSelected | 默认选中的项                                                                                                                                                | object / array      | —      | —      |
+| method-confirm  | 选择完成之前调用的方法。该方法的参数是选择的结果或选择的结果集合（当设置 `checkable` 为 true 时），请确保该方法返回一个 promise。                           | function (selected) | —      | —      |
+| attrs-dialog    | dialog 弹窗 [el-dialog](https://element.eleme.cn/2.13/#/zh-CN/component/dialog#attributes) 对应的属性，当设置该属性时，`title` 属性值会被该属性对应的值覆盖 | object              | —      | —      |
 
 ### ListSelectPane Events
 
