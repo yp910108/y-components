@@ -15,12 +15,16 @@ export default {
   inheritAttrs: false,
   data() {
     return {
-      isMouseEnter: true
+      isMouseEnter: false
     }
   },
   computed: {
     hideIcon() {
-      return this.$attrs.disabled === undefined && this.$attrs.value && this.isMouseEnter
+      const { disabled, clearable, value } = this.$attrs
+      if (disabled || disabled === '') {
+        return false
+      }
+      return (clearable || clearable === undefined || clearable === '') && this.isMouseEnter && value
     },
     valueFormat() {
       return (

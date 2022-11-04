@@ -332,12 +332,6 @@ pro-table 是由 y-table 派生，建议在使用 pro-table 前先熟悉 [y-tabl
 ```html
 <div class="app-content">
   <y-pro-table :columns="columns" :request="methodRequest">
-    <template #search-is-party-member="{ params, prop }">
-      <y-radio-group v-model="params[prop]">
-        <y-radio :label="IS_OR_NOT.is">{{ isOrNotKeyValue[IS_OR_NOT.is] }}</y-radio>
-        <y-radio :label="IS_OR_NOT.not">{{ isOrNotKeyValue[IS_OR_NOT.not] }}</y-radio>
-      </y-radio-group>
-    </template>
     <template #action="{ row }">
       <y-button type="text" @click="handleEdit(row)">修改</y-button>
       <y-divider direction="vertical" />
