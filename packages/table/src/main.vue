@@ -55,6 +55,12 @@ export default {
         const el = this.$refs.table.$el.querySelector('.el-table__body-wrapper')
         scrollTo(el)
       }
+    },
+    addListener() {
+      window.addEventListener('resize', this.$refs.table.doLayout)
+    },
+    removeListener() {
+      window.removeEventListener('resize', this.$refs.table.doLayout)
     }
   },
   computed: {
@@ -82,13 +88,16 @@ export default {
         this[key] = this.$refs.table[key]
       }
     }
-    window.addEventListener('resize', this.$refs.table.doLayout)
+    this.addListener()
   },
   activated() {
-    this.$refs.table.doLayout()
+    this.addListener()
   },
   beforeDestroy() {
-    window.removeEventListener('resize', this.$refs.table.doLayout)
+    this.removeListener()
+  },
+  deactivated() {
+    this.removeListener()
   }
 }
 </script>
