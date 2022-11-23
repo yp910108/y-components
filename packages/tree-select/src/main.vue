@@ -99,6 +99,11 @@ export default {
       filterText: undefined
     }
   },
+  provide() {
+    return {
+      treeSelect: this
+    }
+  },
   methods: {
     scrollToCurrent() {
       const $container = this.$refs.scrollbar.$el.querySelector('.el-scrollbar__wrap')
@@ -233,8 +238,8 @@ export default {
       return {
         ...this.$listeners,
         'node-click': (item, ...rest) => {
+          this.$emit('node-click', item, ...rest)
           if (this.checkable) return
-          this.$emit('node-click', ...rest)
           this.$emit('input', item[this._attrs.nodeKey])
           this.$nextTick(() => {
             this.$emit('change', this.value, this.getCurrentNode())

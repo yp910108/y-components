@@ -28,7 +28,8 @@
               },
               {
                 value: 1000102,
-                label: '1-1-2'
+                label: '1-1-2',
+                disabled: true
               },
               {
                 value: 1000103,
@@ -102,7 +103,8 @@
               },
               {
                 value: 1000102,
-                label: '1-1-2'
+                label: '1-1-2',
+                disabled: true
               },
               {
                 value: 1000103,
