@@ -25,6 +25,7 @@ import { camelize } from 'packages/utils'
 
 export default {
   name: 'YUpload',
+  inheritAttrs: false,
   props: {
     value: Array
   },
