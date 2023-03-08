@@ -112,7 +112,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.0.19',
+  version: '1.0.20',
   install,
   Loading,
   Message,
