@@ -144,7 +144,7 @@ export default {
       return result
     },
     setFieldValue(prop, value) {
-      this.form[prop] = value
+      this.$set(this.form, prop, value)
     },
     setFieldsValue(fields) {
       for (const prop of Object.keys(fields)) {
