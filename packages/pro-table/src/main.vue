@@ -87,7 +87,7 @@
         }"
         v-on="{
           'update:currentPage': (newCurrentPage) => (currentPage = newCurrentPage),
-          'update:pageSize': (newPageSize) => (pageSize = newPageSize),
+          'update:pageSize': handleUpdatePageSize,
           'current-change': fetch,
           'size-change': fetch,
           ..._pagination
@@ -155,7 +155,8 @@ export default {
       if (!!this.request) {
         const params = { ...this.params }
         if (!!this._pagination) {
-          const pageSize = this._pagination.pageSize || this.pageSize
+          const pageSize =
+            !this._pageSizeChanged && this._pagination.pageSize ? this._pagination.pageSize : this.pageSize
           params.currentPage = this.currentPage
           params.pageSize = pageSize
         }
@@ -172,6 +173,10 @@ export default {
             this.loading = false
           })
       }
+    },
+    handleUpdatePageSize(newPageSize) {
+      this._pageSizeChanged = true
+      this.pageSize = newPageSize
     },
     handleSearch(params) {
       this.currentPage = 1
