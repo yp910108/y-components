@@ -17,13 +17,13 @@
         <router-view />
         <footer-nav />
       </div>
-      <el-backtop target=".layout-wrapper .el-scrollbar__wrap" :right="100" :bottom="150" />
+      <y-backtop target=".layout-wrapper .el-scrollbar__wrap" :right="100" :bottom="150" />
     </div>
   </y-scrollbar>
 </template>
 
 <script>
-import { navs } from '@/router/routes'
+import { navs } from '@/router'
 import FooterNav from '@/components/footer-nav'
 
 export default {
@@ -97,8 +97,8 @@ export default {
 .layout-wrapper {
   height: 100%;
   .layout {
-    max-width: 1140px;
     margin: 0 auto;
+    max-width: 1140px;
     .sidebar-wrapper {
       position: fixed;
       z-index: 1;
@@ -144,8 +144,7 @@ export default {
       }
     }
     .container {
-      margin-right: 20px;
-      padding: 50px 0 100px 270px;
+      padding: 50px 20px 100px 270px;
     }
   }
 }
